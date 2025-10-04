@@ -1,0 +1,187 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+/*navbar*/
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-right: 50px;
+    font-size: 30px;
+    border-bottom: solid black 2px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+/*menu*/
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 20px;
+    list-style: none;
+    font-size: 20px;
+}
+.menuitems{
+    color: rgb(87, 87, 255);
+}
+/*outerlayer*/
+.outerlayer{
+    flex-grow: 1;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+     overflow: hidden;
+}
+.listlayer {
+    width: 35%;
+    height: 100%;
+    font-size: 25px;
+    border-right: solid rgb(70, 70, 70) 3px;
+    color: rgb(70, 70, 70);
+}
+.head_list{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: solid rgb(70, 70, 70) 2px;
+    text-align: center;
+}
+
+.list_items{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    
+    list-style-type: decimal;
+    list-style-position: inside;
+    overflow-y: scroll;
+    
+}
+.book_item{
+    display: flex;flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+    cursor: pointer;
+}
+.delete-btn{
+    background-color: white;
+    height: 100%;
+    height: 90%;
+    border: 2px solid rgb(70, 70, 70);
+    border-radius: 15px;
+    width: 30px;
+}
+.delete-btn .icon {
+    font-size: 30px;
+}
+
+
+/*description*/
+.briefview{
+    width: 65%; 
+    height: 100%;  
+    color: rgb(70, 70, 70);
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.decription_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow-y: scroll;
+}
+/*add-button*/
+.addbutton{
+    color: white;
+    background-color: rgb(87, 87, 255);
+    font-size: 35px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    border: solid #5757ff 3.5px;
+    border-radius: 100%;
+    padding: 5px 15px 5px 15px;
+    cursor: pointer;
+}
+
+.overlay{
+    background-color: black;
+    opacity: 0.8;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+.addpopup{
+    position: fixed;
+    z-index: 2;
+    top: 25%;
+    left: 35%;
+    background-color: #f2f2f2;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    color: #5757ff;
+    border: solid 2px black ;
+    border-radius: 20px;
+}
+.addpopup h1{
+    margin-top: 20px;
+}
+.addpopup form{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+.title , #description {
+    background: transparent;
+    width: 300px;
+    margin: 25px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+.title{
+    padding: 2px;
+    border: none;
+    border-bottom: solid black 2px;
+    font-size: 15px;
+    height: 30px;
+}
+#description{
+    height: 80px;
+}
+.title:focus{
+    outline: none;
+}
+.title:hover::placeholder , #description:hover::placeholder{
+    color: #5757ff;
+}
+.addpopup div{
+    margin: 25px;
+    margin-bottom: 0px;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+}
+.popupbutton{
+    color: white;
+    border: #5757ff;
+    background-color: #5757ff;
+    border-radius: 20px;
+    padding: 5px 10px 5px 10px;
+}

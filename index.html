@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar">
+        <h1 style="color: rgb(87, 87, 255);">Booksky</h1>
+        <ul class="menu">
+            <li class="menuitems">Home</li>
+            <li class="menuitems">Contact us</li>
+        </ul>
+    </nav>
+
+
+    <!--body-->
+    <div class="outerlayer">
+        
+        <!--title list layer-->
+        <div class="listlayer">      
+            <div class="head_list">Books</div>
+            <ol class="list_items">
+                <li class="book_item">title<button class="delete-btn"><i class="fa fa-trash" id="icon"></i></button>
+                </li>
+
+            </ol>
+            <button class="addbutton">+</button>
+        </div>
+
+
+        <!--description layer-->
+        <div class="briefview">
+            <div class="head_list" id="desc_head">Description</div>
+            <p class="decription_box">No description</p>
+            
+        </div>
+    </div>
+
+
+    <!--add form-->
+    <div class="overlay"></div>
+    <div class="addpopup">
+        <h1>Add </h1>
+        <form action="">
+            <input type="text" class="title" placeholder="Title" >
+            <textarea placeholder="short Description..."  id="description" ></textarea>
+            <div>
+                <button id="cancel" class="popupbutton" type="button">Cancel</button>
+                <button id="add" class="popupbutton" type="button">Add</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
