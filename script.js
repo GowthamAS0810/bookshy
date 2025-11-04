@@ -49,11 +49,12 @@ add.addEventListener("click",function(event)
 
 function showDescription(id) {
   const descBox = document.querySelector('.briefview');
+  var decription_box = document.querySelector(".decription_box")
   const book = books[id];
   if (book) {
     descBox.innerHTML = `<div class="head_list" id="desc_head">${book.title}</div>
                          <p class="decription_box">📖 ${book.description}</p>`;
-    var decription_box = document.querySelector(".decription_box")
+    const decription_box = document.querySelector(".decription_box")
     decription_box.style.display="block"
     decription_box.style.padding = "30px"
   } else {
@@ -72,6 +73,7 @@ function delete_item(id){
     olElement.removeChild(liToRemove);
     
   }
+  if(books[id]) books[id]=null;
   
   descBox.innerHTML = `<div class="head_list" id="desc_head">Description</div>
                        <p class="decription_box">No description</p>`;
