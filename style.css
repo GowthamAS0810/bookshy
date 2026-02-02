@@ -32,6 +32,40 @@ body{
 .menuitems{
     color: rgb(87, 87, 255);
 }
+/*menu toggle*/
+.menu-toggle{
+        display: none;
+        cursor: pointer;
+}
+/*side navbar*/
+.side-navbar{
+    width: 50%;
+    height: 96%;
+    position: fixed;
+    background-color: white;
+    color: rgb(87, 87, 255);
+    padding: 30px;
+    top: 0;
+    left: -100%;
+    transition: 1s;
+    
+    border-radius: 0 50px 50px  0;
+    z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.side-navbar-links{
+    list-style: none;    
+}
+.side-navbar-link{
+    color: rgb(87, 87, 255);
+    text-decoration: none;
+    margin-top: 30px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.side-navbar-link:hover{
+    text-decoration: underline;
+}
 /*outerlayer*/
 .outerlayer{
     flex-grow: 1;
@@ -40,7 +74,8 @@ body{
     padding: 0px;
     display: flex;
     flex-direction: row;
-     overflow: hidden;
+    overflow: hidden;
+    z-index: 1;
 }
 .listlayer {
     width: 35%;
@@ -48,6 +83,7 @@ body{
     font-size: 25px;
     border-right: solid rgb(70, 70, 70) 3px;
     color: rgb(70, 70, 70);
+    
 }
 .head_list{
     padding-top: 20px;
@@ -60,8 +96,7 @@ body{
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 100%;
-    
+    width: 100%;    
     list-style-type: decimal;
     list-style-position: inside;
     overflow-y: scroll;
@@ -80,6 +115,7 @@ body{
     border: 2px solid rgb(70, 70, 70);
     border-radius: 15px;
     width: 30px;
+    cursor: pointer;
 }
 .delete-btn .icon {
     font-size: 30px;
@@ -101,6 +137,7 @@ body{
     align-items: center;
     height: 100%;
     overflow-y: scroll;
+    
 }
 /*add-button*/
 .addbutton{
@@ -114,6 +151,7 @@ body{
     border-radius: 100%;
     padding: 5px 15px 5px 15px;
     cursor: pointer;
+    
 }
 
 .overlay{
@@ -124,14 +162,24 @@ body{
     right: 0px;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 2;
     display: none;
+    justify-content: center;
+    align-items: center;
+}
+.addpopup-layer{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
 }
 .addpopup{
-    position: fixed;
-    z-index: 2;
-    top: 25%;
-    left: 35%;
+    position: fixed;  
     background-color: #f2f2f2;
     display: none;
     flex-direction: column;
@@ -139,6 +187,7 @@ body{
     color: #5757ff;
     border: solid 2px black ;
     border-radius: 20px;
+    opacity: 1;
 }
 .addpopup h1{
     margin-top: 20px;
@@ -184,4 +233,34 @@ body{
     background-color: #5757ff;
     border-radius: 20px;
     padding: 5px 10px 5px 10px;
+}
+
+
+@media screen and (max-width: 600px) {
+    /*navbar*/
+        .navbar {
+            font-size: 20px;
+        }
+        .menu{
+            display: none;
+        }
+        .menu-toggle{
+            display: flex;
+        }
+    /*outerlayer*/
+        .outerlayer{
+            display: block;
+        }
+        .listlayer{
+            width: 100%;
+            height: 100%;
+        }
+        .briefview{
+            display: none;
+        }
+    /*addbutton*/
+        .addbutton{
+            right: 20px;
+            left: auto;
+        }
 }
