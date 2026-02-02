@@ -16,7 +16,21 @@
             <li class="menuitems">Home</li>
             <li class="menuitems">Contact us</li>
         </ul>
+        <div class="menu-toggle" onclick="showNavbar()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </nav>
+    <!--side nav bar -->
+    <div class="side-navbar">
+        <p style="text-align: right; cursor: pointer;" onclick="hideNavbar()">
+            <i class="fa-solid fa-xmark"></i>
+        </p>   
+        <ul class="side-navbar-links">
+            <li class="side-navbar-link">Home</li>
+            <li class="side-navbar-link">Contact us</li>
+        </ul>    
+          
+    </div>
 
 
     <!--body-->
@@ -26,9 +40,7 @@
         <div class="listlayer">      
             <div class="head_list">Books</div>
             <ol class="list_items">
-                <li class="book_item">title<button class="delete-btn"><i class="fa fa-trash" id="icon"></i></button>
-                </li>
-
+               
             </ol>
             <button class="addbutton">+</button>
         </div>
@@ -45,16 +57,18 @@
 
     <!--add form-->
     <div class="overlay"></div>
-    <div class="addpopup">
-        <h1>Add </h1>
-        <form action="">
-            <input type="text" class="title" placeholder="Title" >
-            <textarea placeholder="short Description..."  id="description" ></textarea>
-            <div>
-                <button id="cancel" class="popupbutton" type="button">Cancel</button>
-                <button id="add" class="popupbutton" type="button">Add</button>
-            </div>
-        </form>
+    <div class="addpopup-layer">
+        <div class="addpopup">
+            <h1>Add </h1>
+            <form action="">
+                <input type="text" class="title" placeholder="Title" >
+                <textarea placeholder="short Description..."  id="description" ></textarea>
+                <div>
+                    <button id="cancel" class="popupbutton" type="button">Cancel</button>
+                    <button id="add" class="popupbutton" type="button">Add</button>
+                </div>
+            </form>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
