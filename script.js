@@ -1,11 +1,12 @@
 var overlay = document.querySelector(".overlay")
 var add_menu = document.querySelector(".addpopup")
-
+var button_layer = document.querySelector(".addpopup-layer")
 //addpopup button
 var popup_button = document.querySelector(".addbutton")
 popup_button.addEventListener("click",function(){
     overlay.style.display = "block"
     add_menu.style.display = "flex"
+    button_layer.style.display="flex"
 })
 
 //cancel button
@@ -13,6 +14,7 @@ var cancel_btn = document.getElementById("cancel")
 cancel_btn.addEventListener("click",function(){
     overlay.style.display = "none"
     add_menu.style.display = "none"
+    button_layer.style.display="none"
 })
 
 //add button
@@ -42,6 +44,7 @@ add.addEventListener("click",function(event)
         booklist.append(li_ele);
         overlay.style.display = "none"
         add_menu.style.display = "none"
+        button_layer.style.display="none"
         title_ele.value=''
         description_ele.value=''
 }
@@ -80,4 +83,14 @@ function delete_item(id){
   var decription_box = document.querySelector(".decription_box");
   decription_box.style.display="flex";
   
+}
+
+var toggle = document.querySelector(".menu-toggle")
+var menu = document.querySelector(".side-navbar")
+function showNavbar(){
+    menu.style.left="0"
+}
+
+function hideNavbar(){
+    menu.style.left="-100%"
 }
